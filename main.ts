@@ -12,7 +12,8 @@ export default class DimInactiveParagraphsPlugin extends Plugin {
 
 		const style = document.createElement("style");
 		style.textContent = `
-            .dim-inactive .cm-line:not(.cm-active):not(:hover) {
+            .dim-inactive .cm-line:not(.cm-active):not(:hover),
+			.dim-inactive .inline-title:not(:hover) {
                 opacity: 0.5;
                 transition: opacity 0.2s ease-in-out;
             }
